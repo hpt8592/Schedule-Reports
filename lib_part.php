@@ -8,6 +8,33 @@
 		return $result;
 	}
 	
+	function get_num_rows()
+	{
+		$data = get_reports();
+		$rows = mysql_num_rows($data);
+		return $rows;
+	}
+	
+	function get_data_row($data)
+	{
+		$row = mysql_fetch_row($data);
+		return $row;
+	}
+	
+	function instance_module($row)
+	{
+		$q_array = $row[6];
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	function build_table()
 	{
 		$q_array = array_filter(explode(";",$ext_query));
