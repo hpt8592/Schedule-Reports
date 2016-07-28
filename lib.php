@@ -226,9 +226,9 @@ class lib_table extends lib_form {
         echo '<td colspan="'.$colspan.'">'.$val.'</td>';
     }
 	
-	function table_head_center($title,$colspan)
+	function table_head_center($title)
 	{
-		echo '<tr><th colspan="'.$colspan.'"><strong>'.$title.'</strong></th></tr>';
+		echo '<tr><th colspan="100%"><strong>'.$title.'</strong></th></tr>';
 	}
 
 }
@@ -383,7 +383,7 @@ class lib_display_query extends lib_mysql
         $num=mysql_num_rows($data);
         $this->table_start(1,"auto");
 		$row=mysql_fetch_row($data);
-		$this->table_head_center($title,sizeof($row));
+		$this->table_head_center($title);
         for($i=0;$i<$num;$i++)
         {
 			$this->table_tr_start();

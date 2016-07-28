@@ -1,9 +1,7 @@
 <?php
 	require 'lib_part.php';
-	require 'lib.php';
-	
-	
-	
-	$reports = prep_data();
+	$reports = execute_sequence();
+	echo $reports;
+	//$ex_url = curl();
 	
 ?>
