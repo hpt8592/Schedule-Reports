@@ -1,4 +1,3 @@
 <?php
-    mysql_connect("localhost","root","iamadmin");
-    mysql_select_db("p1");
+	$con=mysqli_connect("localhost","root","iamadmin","p1");
 ?>

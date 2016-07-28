@@ -147,7 +147,24 @@
 			if($row[7]!="" || $row!=null)
 			{
 				$url_curl = get_url_content($row[7]);
-				$send = "<html><body>".$html."<br><br><strong>URL Result:</strong>".$url_curl."<br></body>";
+				$send = "<html><head><style>
+									table {
+    										font-family: arial, sans-serif;
+    										border-collapse: collapse;
+    										width: auto;
+									}
+
+									td, th {
+    										border: 1px solid #dddddd;
+    										text-align: left;
+    										padding: 8px;
+									}
+
+									tr:nth-child(even) {
+    										background-color: #dddddd;
+									}
+									</style></head>
+				<body>".$html."<br><br><strong>URL Result:</strong>".$url_curl."<br></body>";
 			}
 			else
 			{
